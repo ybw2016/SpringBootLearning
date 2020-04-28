@@ -1,7 +1,7 @@
 package com.ttl.service.impl;
 
 import com.ttl.constant.TtlTitle;
-import com.ttl.service.TtlDemoService;
+import com.ttl.service.TtlThreadPoolService;
 import com.ttl.util.LogUtil;
 import com.ttl.util.ttl.InheritableThreadLocalUtil;
 import com.ttl.util.ttl.ThreadLocalUtil;
@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class TtlDemoServiceImpl implements TtlDemoService {
+public class TtlThreadPoolServiceImpl implements TtlThreadPoolService {
     @Override
     public String testThreadLocal() {
         ThreadLocal threadLocal = ThreadLocalUtil.getThreadLocal();

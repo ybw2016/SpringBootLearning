@@ -1,4 +1,4 @@
-package com.ttl.thread;
+package com.ttl.config;
 
 import com.alibaba.ttl.threadpool.TtlExecutors;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +19,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  */
 @Configuration
 //@EnableAsync//开启注解：开启异步支持
-public class ThreadPool {
+public class ThreadPoolConfig {
 
     private static final int CORE_POOL_SIZE = Runtime.getRuntime().availableProcessors() * 2;
     private static final int MAX_POOL_SIZE = CORE_POOL_SIZE * 4 < 256 ? 256 : CORE_POOL_SIZE * 4;

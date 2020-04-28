@@ -1,7 +1,7 @@
 package com.ttl.service;
 
 /**
- * <p>TtlDemoService</p>
+ * <p>TtlThreadPoolService</p>
  * <p>description.</p>
  *
  * @author : jiangbing.yang
@@ -10,7 +10,7 @@ package com.ttl.service;
  * @company :
  */
 
-public interface TtlDemoService {
+public interface TtlThreadPoolService {
     // 同步获取，能获取值
     String testThreadLocal();
 

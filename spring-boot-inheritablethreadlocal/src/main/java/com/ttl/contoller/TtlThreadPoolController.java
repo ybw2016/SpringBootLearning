@@ -1,7 +1,7 @@
 package com.ttl.contoller;
 
 import com.ttl.constant.TtlTitle;
-import com.ttl.service.TtlDemoService;
+import com.ttl.service.TtlThreadPoolService;
 import com.ttl.util.LogUtil;
 import com.ttl.util.ttl.InheritableThreadLocalUtil;
 import com.ttl.util.ttl.ThreadLocalUtil;
@@ -21,9 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RequestMapping("/")
 @RestController
-public class TtlDemoController {
+public class TtlThreadPoolController {
     @Autowired
-    private TtlDemoService ttlDemoService;
+    private TtlThreadPoolService ttlThreadPoolService;
 
     @RequestMapping("thread-local")
     public String testThreadLocal() {
@@ -31,7 +31,7 @@ public class TtlDemoController {
         threadLocal.set(TtlTitle.testThreadLocal.getValue());
         LogUtil.log(TtlTitle.testThreadLocal, Thread.currentThread(), threadLocal.get());
 
-        return ttlDemoService.testThreadLocal();
+        return ttlThreadPoolService.testThreadLocal();
     }
 
     @RequestMapping("thread-local/async")
@@ -40,7 +40,7 @@ public class TtlDemoController {
         threadLocal.set(TtlTitle.testThreadLocalAsync.getValue());
         LogUtil.log(TtlTitle.testThreadLocalAsync, Thread.currentThread(), threadLocal.get());
 
-        return ttlDemoService.testThreadLocalAsync();
+        return ttlThreadPoolService.testThreadLocalAsync();
     }
 
     @RequestMapping("inherit-thread-local/async")
@@ -49,7 +49,7 @@ public class TtlDemoController {
         threadLocal.set(TtlTitle.testInheritThreadLocalAsync.getValue());
         LogUtil.log(TtlTitle.testInheritThreadLocalAsync, Thread.currentThread(), threadLocal.get());
 
-        return ttlDemoService.testInheritThreadLocalAsync();
+        return ttlThreadPoolService.testInheritThreadLocalAsync();
     }
 
     @RequestMapping("inherit-thread-local/thread-pool")
@@ -58,7 +58,7 @@ public class TtlDemoController {
         threadLocal.set(TtlTitle.testInheritThreadLocalThreadPool.getValue());
         LogUtil.log(TtlTitle.testInheritThreadLocalThreadPool, Thread.currentThread(), threadLocal.get());
 
-        return ttlDemoService.testInheritThreadLocalThreadPool();
+        return ttlThreadPoolService.testInheritThreadLocalThreadPool();
     }
 
     @RequestMapping("transmit-thread-local/thread-pool")
@@ -67,6 +67,6 @@ public class TtlDemoController {
         threadLocal.set(TtlTitle.testTransmitThreadLocalThreadPool.getValue());
         LogUtil.log(TtlTitle.testTransmitThreadLocalThreadPool, Thread.currentThread(), threadLocal.get());
 
-        return ttlDemoService.testTransmitThreadLocalThreadPool();
+        return ttlThreadPoolService.testTransmitThreadLocalThreadPool();
     }
 }
