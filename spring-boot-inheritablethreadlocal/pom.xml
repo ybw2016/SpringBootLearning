@@ -50,6 +50,12 @@
             <optional>true</optional>
         </dependency>
 
+        <dependency>
+            <groupId>com.ofpay</groupId>
+            <artifactId>logback-mdc-ttl</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>

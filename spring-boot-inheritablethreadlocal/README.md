@@ -47,3 +47,7 @@ testCallable ------- 当前线程：pool-1-thread-1，ThreadLocal值：testCalla
 
 testCallable ------- 当前线程：http-nio-2001-exec-4，ThreadLocal值：testCallable_Value
 testCallable ------- 当前线程：pool-1-thread-1，ThreadLocal值：testCallable_Value
+
+### 5. 参考链接
+@CallMe兵哥  简书
+https://www.jianshu.com/p/d542d2773f7b
