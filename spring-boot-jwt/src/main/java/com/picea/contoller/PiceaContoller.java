@@ -1,8 +1,8 @@
-package com.picea.contoller;
+package com.ttl.contoller;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.picea.constant.ConstantKey;
+import com.ttl.constant.ConstantKey;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

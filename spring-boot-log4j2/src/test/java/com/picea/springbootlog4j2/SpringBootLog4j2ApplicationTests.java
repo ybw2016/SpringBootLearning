@@ -1,4 +1,4 @@
-package com.picea.springbootlog4j2;
+package com.ttl.springbootlog4j2;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

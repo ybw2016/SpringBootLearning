@@ -1,4 +1,4 @@
-package com.picea.controller;
+package com.ttl.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

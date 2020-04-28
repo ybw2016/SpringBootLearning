@@ -1,4 +1,4 @@
-package com.picea.springbootlog4jasync;
+package com.ttl.springbootlog4jasync;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,6 +1,6 @@
-package com.picea.contoller;
+package com.ttl.contoller;
 
-import com.picea.service.PiceaService;
+import com.ttl.service.PiceaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

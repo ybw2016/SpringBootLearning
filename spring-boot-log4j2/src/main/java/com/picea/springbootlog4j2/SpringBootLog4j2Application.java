@@ -1,4 +1,4 @@
-package com.picea.springbootlog4j2;
+package com.ttl.springbootlog4j2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

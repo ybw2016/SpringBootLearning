@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -11,8 +12,10 @@
         <module name="spring-boot-async-3" />
         <module name="spring-boot-async-deferredresult" />
         <module name="spring-boot-async-servlet" />
+        <module name="spring-boot-inheritablethreadlocal" />
         <module name="spring-boot-learning-demo" />
         <module name="springasyncdemo" />
+        <module name="springdemo" />
       </profile>
     </annotationProcessing>
   </component>

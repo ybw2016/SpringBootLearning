@@ -1,0 +1,13 @@
+package com.ttl;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBootAsyncServletApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootAsyncServletApplication.class, args);
+    }
+
+}

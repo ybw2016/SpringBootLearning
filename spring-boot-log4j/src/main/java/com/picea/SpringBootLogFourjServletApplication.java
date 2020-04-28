@@ -1,4 +1,4 @@
-package com.picea;
+package com.ttl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.picea.springbootjwt;
+package com.ttl.springbootjwt;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
