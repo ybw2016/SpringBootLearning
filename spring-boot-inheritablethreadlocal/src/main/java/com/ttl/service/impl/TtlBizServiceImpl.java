@@ -11,6 +11,7 @@ public class TtlBizServiceImpl implements TtlBizService {
     @Override
     public String testLogback() {
         TtlMiscTitle title = TtlMiscTitle.testLogback;
+        // 当前登录的用户
         String userKey = "userFlagKey";
         MDC.put(userKey, "TRANSMITTABLE-THREAD-LOCAL-USER");
 

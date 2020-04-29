@@ -51,7 +51,7 @@ public class TtlThreadPoolServiceImpl implements TtlThreadPoolService {
             LogUtil.log(TtlTitle.testInheritThreadLocalAsync, Thread.currentThread(), threadLocal.get());
             threadLocal.remove();
             System.out.println();
-        }).run();
+        }).start();
 
         return TtlTitle.testInheritThreadLocalAsync.toString();
     }

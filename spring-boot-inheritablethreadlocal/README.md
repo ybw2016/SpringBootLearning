@@ -15,6 +15,7 @@
 ### 3. JavaAgent方式启动
 #####3.1 运行命令
 java -Xbootclasspath/a:transmittable-thread-local-2.11.4.jar -javaagent:transmittable-thread-local-2.11.4.jar -jar spring-boot-inheritablethreadlocal-1.0.0.jar
+java -javaagent:transmittable-thread-local-2.11.4.jar -jar spring-boot-inheritablethreadlocal-1.0.0.jar
 
 ##### 3.2 运行测试接口
 http://127.0.0.1:2001/callable

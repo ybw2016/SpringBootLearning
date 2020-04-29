@@ -52,10 +52,15 @@ public class TtlThreadPoolController {
         return ttlThreadPoolService.testInheritThreadLocalAsync();
     }
 
+    private int index = 1;
+
     @RequestMapping("inherit-thread-local/thread-pool")
     public String testInheritThreadLocalThreadPool() {
         ThreadLocal threadLocal = InheritableThreadLocalUtil.getThreadLocal();
-        threadLocal.set(TtlTitle.testInheritThreadLocalThreadPool.getValue());
+
+        String value = String.format("%s-%s", TtlTitle.testInheritThreadLocalThreadPool.getValue(), index++);
+        threadLocal.set(value);
+
         LogUtil.log(TtlTitle.testInheritThreadLocalThreadPool, Thread.currentThread(), threadLocal.get());
 
         return ttlThreadPoolService.testInheritThreadLocalThreadPool();
@@ -64,7 +69,10 @@ public class TtlThreadPoolController {
     @RequestMapping("transmit-thread-local/thread-pool")
     public String testTransmitThreadLocalThreadPool() {
         ThreadLocal threadLocal = TransmittableThreadLocalUtil.getThreadLocal();
-        threadLocal.set(TtlTitle.testTransmitThreadLocalThreadPool.getValue());
+
+        String value = String.format("%s-%s", TtlTitle.testTransmitThreadLocalThreadPool.getValue(), index++);
+        threadLocal.set(value);
+
         LogUtil.log(TtlTitle.testTransmitThreadLocalThreadPool, Thread.currentThread(), threadLocal.get());
 
         return ttlThreadPoolService.testTransmitThreadLocalThreadPool();

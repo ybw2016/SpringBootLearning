@@ -19,7 +19,10 @@ import java.util.concurrent.Future;
  */
 @Service
 public class TtlRunnableCallableServiceImpl implements TtlRunnableCallableService {
-    ExecutorService executorService = Executors.newFixedThreadPool(2);
+    ExecutorService runnableExecutorService = Executors.newFixedThreadPool(2);
+    ExecutorService runnableTtlExecutorService = Executors.newFixedThreadPool(2);
+    ExecutorService callableExecutorService = Executors.newFixedThreadPool(2);
+    ExecutorService callableTtlExecutorService = Executors.newFixedThreadPool(2);
 
     @Override
     public String testRunnable() {
@@ -28,7 +31,7 @@ public class TtlRunnableCallableServiceImpl implements TtlRunnableCallableServic
         threadLocal.set(title.getValue());
         Runnable runnable = getRunnable(title);
 
-        executorService.submit(runnable);
+        runnableExecutorService.submit(runnable);
 
         return title.getValue();
     }
@@ -40,7 +43,7 @@ public class TtlRunnableCallableServiceImpl implements TtlRunnableCallableServic
         threadLocal.set(title.getValue());
         Runnable runnable = getRunnable(title);
 
-        executorService.submit(TtlRunnable.get(runnable));
+        runnableTtlExecutorService.submit(TtlRunnable.get(runnable));
 
         return title.getValue();
     }
@@ -52,7 +55,7 @@ public class TtlRunnableCallableServiceImpl implements TtlRunnableCallableServic
         threadLocal.set(title.getValue());
         Callable<String> callable = getCallable(title);
 
-        Future<String> future = executorService.submit(callable);
+        Future<String> future = callableExecutorService.submit(callable);
         return getResult(future);
     }
 
@@ -63,7 +66,7 @@ public class TtlRunnableCallableServiceImpl implements TtlRunnableCallableServic
         threadLocal.set(title.getValue());
         Callable<String> callable = getCallable(title);
 
-        Future<String> future = executorService.submit(TtlCallable.get(callable));
+        Future<String> future = callableTtlExecutorService.submit(TtlCallable.get(callable));
         return getResult(future);
     }
 

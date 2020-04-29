@@ -11,6 +11,7 @@ package com.ttl.util.ttl;
  */
 
 public class ThreadLocalUtil {
+    // 推荐用：private static，便于多个线程都访问同一个[方法区] 里面的ThreadLocal，多个线程共用一份ThreadLocal，目的：节约空间
     public static final ThreadLocal<String> THREAD_LOCAL = new ThreadLocal<>();
 
     //获取线程中保存的值
