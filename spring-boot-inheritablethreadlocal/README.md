@@ -12,18 +12,22 @@
 - http://127.0.0.1:2001/callable
 - http://127.0.0.1:2001/callable-ttl
 
-### 3. JavaAgent方式启动
-#####3.1 运行命令
+### 3. 测试接口（logback支持）
+- http://127.0.0.1:2001/logback
+- http://127.0.0.1:2001/logback/thread-pool
+
+### 4. JavaAgent方式启动
+#####4.1 运行命令
 java -Xbootclasspath/a:transmittable-thread-local-2.11.4.jar -javaagent:transmittable-thread-local-2.11.4.jar -jar spring-boot-inheritablethreadlocal-1.0.0.jar
 java -javaagent:transmittable-thread-local-2.11.4.jar -jar spring-boot-inheritablethreadlocal-1.0.0.jar
 
-##### 3.2 运行测试接口
+##### 4.2 运行测试接口
 http://127.0.0.1:2001/callable
 
 注：此种方式需要将transmittable-thread-local-2.11.4.jar放到当前jar包同一目录;
 
-### 4. 运行结果示例
-### 4.1 运行结果示例（http://127.0.0.1:2001/callable）
+### 5. 运行结果示例
+### 5.1 运行结果示例（http://127.0.0.1:2001/callable）
 testCallable ------- 当前线程：http-nio-2001-exec-1，ThreadLocal值：testCallable_Value
 testCallable ------- 当前线程：pool-1-thread-1，ThreadLocal值：testCallable_Value
 
@@ -36,7 +40,7 @@ testCallable ------- 当前线程：pool-1-thread-1，ThreadLocal值：null
 testCallable ------- 当前线程：http-nio-2001-exec-4，ThreadLocal值：testCallable_Value
 testCallable ------- 当前线程：pool-1-thread-2，ThreadLocal值：null
 
-### 4.2 运行结果示例（http://127.0.0.1:2001/callable Agent方式启动）
+### 5.2 运行结果示例（http://127.0.0.1:2001/callable Agent方式启动）
 testCallable ------- 当前线程：http-nio-2001-exec-1，ThreadLocal值：testCallable_Value
 testCallable ------- 当前线程：pool-1-thread-1，ThreadLocal值：testCallable_Value
 
@@ -49,6 +53,6 @@ testCallable ------- 当前线程：pool-1-thread-1，ThreadLocal值：testCalla
 testCallable ------- 当前线程：http-nio-2001-exec-4，ThreadLocal值：testCallable_Value
 testCallable ------- 当前线程：pool-1-thread-1，ThreadLocal值：testCallable_Value
 
-### 5. 参考链接
+### 6. 参考链接
 @CallMe兵哥  简书
 https://www.jianshu.com/p/d542d2773f7b

@@ -8,7 +8,7 @@
     <!-- ConsoleAppender：把日志输出到控制台 -->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %magenta(%X{userFlagKey}) %blue(%-5level) %cyan(%logger Line:%-1L) %yellow(%X{X-B3-TraceId:-}) - %msg%n
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %magenta(%X{userKey}) %blue(%-5level) %cyan(%logger Line:%-1L) %yellow(%X{X-B3-TraceId:-}) - %msg%n
             </pattern>
             <!-- 控制台也要使用UTF-8，不要使用GBK，否则会中文乱码 -->
             <charset>UTF-8</charset>

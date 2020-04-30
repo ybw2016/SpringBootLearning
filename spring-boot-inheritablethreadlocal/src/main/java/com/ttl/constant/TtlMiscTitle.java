@@ -15,7 +15,8 @@ public enum TtlMiscTitle {
     testCallable("testCallable_Value"),
     testCallableTtl("testCallable_Value"),
 
-    testLogback("testLogback_Value");
+    testLogback("testLogback_Value"),
+    testLogbackThreadPool("testLogbackThreadPool_Value");
 
     String value;
 }
